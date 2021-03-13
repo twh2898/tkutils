@@ -5,18 +5,36 @@ A collection of utilities for tkinter and ttk.
 
 ## Usage
 
-To import this project as a git submodule, use the following.
+### Git Submodule
 
 ```sh
 git submodule add https://gitlab.com/twh2898/tkutils.git
 ```
 
-Then you can import the module using
 
-```py
-from tkutils import *
+### Install
+
+```sh
+git clone https://gitlab.com/twh2898/tkutils.git
+cd tkutils
+pip install --user .
 ```
 
+
+### Developer Install
+
+A developer install will link to the project code rather than copying the code
+into the system. This allows you to update the code without having to install
+again.
+
+```sh
+git clone https://gitlab.com/twh2898/tkutils.git
+cd tkutils
+pip install --user -e .
+```
+
+
+## API
 
 ### PathControl
 
