@@ -14,5 +14,8 @@ license: MIT
 scripts:
     - __init__.py
     - pathcontrol.py
+    - quickapp.py
+    - validate.py
+    - verticalscrollbar.py
 include_package_data: True
 zip_safe: False
