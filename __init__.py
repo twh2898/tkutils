@@ -1,4 +1,4 @@
-"""A collection of utilities for tkinter and ttk.""" 
+"""A collection of utilities for tkinter and ttk."""
 
 __all__ = ['tk', 'ttk', 'PathControl', 'VerticalScrolledFrame']
 
@@ -7,4 +7,3 @@ import tkinter.ttk as ttk
 
 from .pathcontrol import PathControl
 from .verticalscrollbar import VerticalScrolledFrame
-
