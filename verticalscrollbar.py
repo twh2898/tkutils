@@ -4,6 +4,7 @@ import tkinter.ttk as ttk
 
 # http://tkinter.unpythonic.net/wiki/VerticalScrolledFrame
 
+
 class VerticalScrolledFrame(ttk.Frame):
     """A pure Tkinter scrollable frame that actually works!
     * Use the 'interior' attribute to place widgets inside the scrollable frame
@@ -11,14 +12,15 @@ class VerticalScrolledFrame(ttk.Frame):
     * This frame only allows vertical scrolling
 
     """
+
     def __init__(self, parent, *args, **kw):
-        ttk.Frame.__init__(self, parent, *args, **kw)            
+        ttk.Frame.__init__(self, parent, *args, **kw)
 
         # create a canvas object and a vertical scrollbar for scrolling it
         vscrollbar = ttk.Scrollbar(self, orient=tk.VERTICAL)
         vscrollbar.pack(fill=tk.Y, side=tk.RIGHT, expand=tk.FALSE)
         canvas = tk.Canvas(self, bd=0, highlightthickness=0,
-                        yscrollcommand=vscrollbar.set)
+                           yscrollcommand=vscrollbar.set)
         canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=tk.TRUE)
         vscrollbar.config(command=canvas.yview)
 
@@ -55,14 +57,15 @@ if __name__ == "__main__":
         def __init__(self, *args, **kwargs):
             root = tk.Tk.__init__(self, *args, **kwargs)
 
-
             self.frame = VerticalScrolledFrame(root)
             self.frame.pack()
-            self.label = Label(text="Shrink the window to activate the scrollbar.")
+            self.label = Label(
+                text="Shrink the window to activate the scrollbar.")
             self.label.pack()
             buttons = []
             for i in range(10):
-                buttons.append(Button(self.frame.interior, text="Button " + str(i)))
+                buttons.append(
+                    Button(self.frame.interior, text="Button " + str(i)))
                 buttons[-1].pack()
 
     app = SampleApp()
