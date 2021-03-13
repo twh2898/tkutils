@@ -5,4 +5,5 @@ develop-eggs/
 dist/
 eggs/
 .eggs/
-
+*.egg-info/
+*.egg
